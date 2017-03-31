@@ -1,0 +1,45 @@
+
+
+package assignment9;
+
+import java.util.ArrayList;
+
+public class CollectionsWithDuplicates {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Declare an ArrayList of String
+				ArrayList<String> DayList = new ArrayList<>();
+				// Populate the Arraylist with values having duplicate entries
+				DayList.add("aaa");
+				DayList.add("bbb");
+				DayList.add("ccc");
+				DayList.add("ddd");
+				DayList.add("eee");
+				DayList.add("fff");
+				DayList.add("bbb");
+				DayList.add("ccc");
+				DayList.add("ddd");
+				DayList.add("aaa");
+
+				// Create new ArrayList
+				ArrayList<String> newNameList = new ArrayList<>();
+
+				// Execute the for loop for every element of the ArrayList NameList -
+				// Store the element in the variable name
+				for (String name : DayList) {
+					// if the name is not present in the newNameList ArryList then add
+					// the value to it- Thus duplicate values are avoided.
+					if (!newNameList.contains(name)) {
+						newNameList.add(name);
+					}
+				}
+
+				for (String name : newNameList) {
+					System.out.println("Name - " + name);
+				}
+			}
+
+	}
+
